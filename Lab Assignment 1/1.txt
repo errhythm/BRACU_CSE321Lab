@@ -1,0 +1,56 @@
+a.
+
+cat > 20101298_1.txt
+cat > 20101298_2.txt
+cat > 20101298_3.txt
+cat > 20101298_4.txt
+
+mkdir Rhythm1
+mkdir Rhythm2
+
+mv 20101298_1.txt Rhythm1
+mv 20101298_2.txt Rhythm1
+mv 20101298_3.txt Rhythm1
+
+cp Rhythm1/20101298_1.txt Rhythm2
+cp Rhythm1/20101298_2.txt Rhythm2
+
+mkdir Rhythm3
+cp -R Rhythm1 Rhythm3
+
+cd Rhythm3
+ls -l
+
+chmod g+rx Rhythm1
+chmod o+rx Rhythm1
+
+
+cd ..
+ls
+
+mv Rhythm3 ../
+rm -r ./*
+
+b.
+
+cat > course.txt
+CSE321 - Operating Systems - 06
+CSE340 - Computer Architecture - 05
+CSE424 - Pattern Recognition - 01
+ENV103 - Elements of Environmental Science - 07
+^C
+
+grep -c CSE course.txt
+
+c.
+
+cd /
+ls -a
+
+d.
+
+sed -n '5,17p' course.txt
+
+
+
+
